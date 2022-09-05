@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localization_master/localization/demo_localization.dart';
 import 'package:flutter_localization_master/router/custom_router.dart';
-import 'package:flutter_localization_master/router/route_constants.dart';
+
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'localization/language_constants.dart';
@@ -49,14 +49,12 @@ class _MyAppState extends State<MyApp> {
     } else {
       return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: "Flutter Localization Demo",
+        title: "bmi calculator",
         theme: ThemeData(primarySwatch: Colors.blue),
         locale: _locale,
         supportedLocales: [
           Locale("en", "US"),
-          Locale("fa", "IR"),
-          Locale("ar", "SA"),
-          Locale("hi", "IN")
+          Locale("ar", "SA")
         ],
         localizationsDelegates: [
           DemoLocalization.delegate,
@@ -74,7 +72,7 @@ class _MyAppState extends State<MyApp> {
           return supportedLocales.first;
         },
         onGenerateRoute: CustomRouter.generatedRoute,
-        initialRoute: homeRoute,
+
       );
     }
   }
